@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono,Fraunces} from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -30,9 +31,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}
-    >
-      <body className="mx-auto max-w-5xl bg-stone-50 px-12 py-36 font-fraunces antialiased">{children}</body>
+      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}>
+      <body className="mx-auto max-w-5xl bg-stone-50 dark:bg-stone-950 px-12 py-36 font-fraunces antialiased transition-colors">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

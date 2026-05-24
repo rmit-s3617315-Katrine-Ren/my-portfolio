@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 :root {
   --background: #ffffff;
@@ -13,11 +15,9 @@
   --font-fraunces: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ededed;
-  }
+:root.dark {
+  --background: #000000;
+  --foreground: #ededed;
 }
 
 body {
