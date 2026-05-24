@@ -1,28 +1,36 @@
 import Image from "next/image";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Home() {
   return (
-    <div className="grid grid-cols-1 gap-12 md:grid-cols-[2fr_1fr]">
+
+    <div className="relative">
+      {/* Theme Toggle  */}
+      <div className="absolute top-0 right-0">
+        <ThemeToggle />
+      </div>
+
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-[2fr_1fr]">
       {/* Left */}
-      <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 dark:bg-black">
-        <main className="flex flex-1 w-full max-w-3xl flex-col gap-13 items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+      <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50">
+        <main className="flex flex-1 w-full max-w-3xl flex-col gap-13 items-center justify-between py-10 sm:py-32 px-0 xl:px-12 bg-white dark:bg-black sm:items-start">
           {/* Intro */}
           <section>
             <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">Portfolio</h1>
-            <p className="text-lg text-stone-500"><p>I’m looking for my next role in <a href="/developer-education-principles"><strong>frontend development</strong></a> or <a href="/dream-role"><strong>e-commerce replatforming</strong></a>. If you’re hiring:</p>
-            </p>
+            <p className="text-lg text-stone-500">I’m looking for my next role in <strong>frontend development</strong> or <strong>e-commerce replatforming</strong>. If you’re hiring:</p>
+            
             <span className="not-prose relative inline-block mt-6">
               <span className="transition-opacity duration-500 opacity-100"></span>
               <a href="https://www.linkedin.com/in/katrine-ren-69705a83/" target="_blank" rel="noopener noreferrer"
-                className="relative z-1 inline-flex items-center rounded-md bg-stone-800 px-4 py-2 text-base font-medium text-white no-underline hover:bg-stone-700">Let's talk</a>
+                className="relative z-1 inline-flex items-center rounded-md px-4 py-2 text-base font-medium no-underline bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc]">Let's talk</a>
             </span>
           </section>
           {/* Work */}
-          <section className="flex flex-col items-center gap-4 text-center sm:items-start sm:text-left">
+          <section className="flex flex-col gap-4 text-left sm:items-start">
             <h2 className="max-w-xs text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
               Work
             </h2>
-            <ul>
+            <ul className="list-disc ml-5">
               <li className="text-lg text-stone-500">
                 <a href="https://reebok.com.au/" className="font-medium text-zinc-950 dark:text-zinc-50" target="_blank" rel="noopener noreferrer">Reebok AU</a> Shopify Replatforming | Theme, Storefront, Shoppable Journey, custom JSON templates for drag-n-drop CMS </li>
               <li className="text-lg text-stone-500">
@@ -35,45 +43,47 @@ export default function Home() {
               <li className="text-lg text-stone-500"><a href="https://www.davidjones.com/credit-card" className="font-medium text-zinc-950 dark:text-zinc-50" target="_blank" rel="noopener noreferrer">David Jones Credit Card Hub</a> | Built and maintained</li>
               <li className="text-lg text-stone-500"><a href="https://www.davidjones.com/blog/fragrance-layering" className="font-medium text-zinc-950 dark:text-zinc-50" target="_blank" rel="noopener noreferrer">Fragrance Layering Blog Post</a> | one of the most popular David Jones blog posts with JuxtaposeJS sliders, ranking in Top 4 Google Search results for keyword "fragrance layering"</li>
               <li className="text-lg text-stone-500"><a href="https://www.davidjones.com/blog/trends-to-know-in-2026/" className="font-medium text-zinc-950 dark:text-zinc-50" target="_blank" rel="noopener noreferrer">Trends To Know 2026</a> | one of the high-engagment David Jones blog posts on the site and ranked in Top 4 Google Search results for keyword "trends 2026"</li>
-              <li className="text-lg text-stone-500"><a href="https://www.davidjones.com/blog/fragrance-layering" className="font-medium text-zinc-950 dark:text-zinc-50" target="_blank" rel="noopener noreferrer">Year of Horse Horoscope Blog Post</a> | one of the most high-engaging David Jones blog posts with gamified zodiac spinning wheels</li>
+              <li className="text-lg text-stone-500"><a href="https://www.davidjones.com/blog/gifting/in-the-year-of-the-horse-your-2026-chinese-zodiac-predictions/" className="font-medium text-zinc-950 dark:text-zinc-50" target="_blank" rel="noopener noreferrer">Year of Horse Horoscope Blog Post</a> | one of the most high-engaging David Jones blog posts with gamified zodiac spinning wheels</li>
             </ul>
-          </section>
-          {/* Contact */}
-          <section className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-            <a
-              className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Deploy Now
-            </a>
-            <a
-              className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-              href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Documentation
-            </a>
           </section>
         </main>
       </div>
       {/* Right sidebar */}
-      <div className="py-36">
+      <div className="py-10 sm:py-32">
         <h2 className="text-2xl font-semibold text-black dark:text-zinc-50 pb-8">About Me</h2>
         <p className="text-stone-500">
           <Image
-            className="float-left mt-0! mr-7 mb-2 w-[3lh] rounded-full"
+            className="float-left mt-0! mr-7 mb-2 w-[3lh] lg:w-[5lh] rounded-full"
             src="/profile.png"
             alt="Katrine Ren's profile picture"
-            width={400}
-            height={400}
+            width={500}
+            height={500}
             priority
           />
           Hey, I am Katrine, a Web Developer with 5 years of experience in fashion retail and e-commerce, specialising in Shopify development, frontend performance, and CMS-driven solutions. I bring end-to-end ownership, a get-it-done attitude, and a track record of delivering high-impact digital experiences at scale — from re-platforming retail storefronts to measurable SEO and performance wins.
         </p>
+        {/* Contact */}
+          <section className="flex gap-4 text-sm font-medium sm:flex-row mt-10">
+            <a
+              className="flex h-12 w-1/2 items-center justify-center gap-2 rounded-md bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[120px]"
+              href="https://github.com/rmit-s3617315-Katrine-Ren/my-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              className="flex h-12 w-1/2 items-center justify-center rounded-md border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[120px]"
+              href="https://www.linkedin.com/in/katrine-ren-69705a83/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+          </section>
       </div>
     </div>
+    </div>
+  
   );
 }
