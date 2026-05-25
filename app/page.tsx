@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
+import SparkleButton from "@/components/SparkleButton";
 
 export default function Home() {
   return (
@@ -19,11 +20,16 @@ export default function Home() {
             <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">Portfolio</h1>
             <p className="text-lg text-stone-500">I’m looking for my next role in <strong>frontend development</strong> or <strong>e-commerce replatforming</strong>. If you’re hiring:</p>
             
-            <span className="not-prose relative inline-block mt-6">
+            
+            {/* <span className="not-prose relative inline-block mt-6">
               <span className="transition-opacity duration-500 opacity-100"></span>
               <a href="https://www.linkedin.com/in/katrine-ren-69705a83/" target="_blank" rel="noopener noreferrer"
                 className="relative z-1 inline-flex items-center rounded-md px-4 py-2 text-base font-medium no-underline bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc]">Let's talk</a>
-            </span>
+            </span> */}
+            <SparkleButton href="https://www.linkedin.com/in/katrine-ren-69705a83/" theme='dark'>Let's talk</SparkleButton>
+
+           
+            
           </section>
           {/* Work */}
           <section className="flex flex-col gap-4 text-left sm:items-start">
@@ -65,22 +71,8 @@ export default function Home() {
         </p>
         {/* Contact */}
           <section className="flex gap-4 text-sm font-medium sm:flex-row mt-10">
-            <a
-              className="flex h-12 w-1/2 items-center justify-center gap-2 rounded-md bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[120px]"
-              href="https://github.com/rmit-s3617315-Katrine-Ren/my-portfolio"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            <a
-              className="flex h-12 w-1/2 items-center justify-center rounded-md border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[120px]"
-              href="https://www.linkedin.com/in/katrine-ren-69705a83/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
+            <SparkleButton href="https://github.com/rmit-s3617315-Katrine-Ren/my-portfolio" theme="dark">GitHub</SparkleButton>
+            <SparkleButton href="https://www.linkedin.com/in/katrine-ren-69705a83/" theme="light">LinkedIn</SparkleButton>
           </section>
       </div>
     </div>
