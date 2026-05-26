@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "../components/ThemeToggle";
 import SparkleButton from "@/components/SparkleButton";
 
 export default function Home() {
