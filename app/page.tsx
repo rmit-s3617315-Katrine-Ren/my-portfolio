@@ -19,18 +19,9 @@ export default function Home() {
           <section>
             <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">Portfolio</h1>
             <p className="text-lg text-stone-500">I’m looking for my next role in <strong>frontend development</strong> or <strong>e-commerce replatforming</strong>. If you’re hiring:</p>
-            
-            
-            {/* <span className="not-prose relative inline-block mt-6">
-              <span className="transition-opacity duration-500 opacity-100"></span>
-              <a href="https://www.linkedin.com/in/katrine-ren-69705a83/" target="_blank" rel="noopener noreferrer"
-                className="relative z-1 inline-flex items-center rounded-md px-4 py-2 text-base font-medium no-underline bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc]">Let's talk</a>
-            </span> */}
-            <SparkleButton href="https://www.linkedin.com/in/katrine-ren-69705a83/" theme='dark'>Let's talk</SparkleButton>
-
-           
-            
+            <SparkleButton href="https://www.linkedin.com/in/katrine-ren-69705a83/" theme='dark'>Let's talk</SparkleButton>  
           </section>
+          
           {/* Work */}
           <section className="flex flex-col gap-4 text-left sm:items-start">
             <h2 className="max-w-xs text-2xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
