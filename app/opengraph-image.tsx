@@ -50,8 +50,10 @@ export default async function OGImage() {
         <div style={{ fontSize: 36, color: '#999', marginTop: 16 }}>
           Senior Frontend developer | Shopify & Contentful | Fashion Retail & Ecommerce · Melbourne
         </div>
-        <div style={{ fontSize: 30, color: '#999', marginTop: 16, borderBottom: '2px solid #999',paddingBottom: '6px' }}>
-          Ask me about my cat
+        <div style={{ display: 'flex', alignItems: 'center',fontSize: 30, color: '#999', marginTop: 16, borderBottom: '2px solid #999',paddingBottom: '6px' }}>
+          <div>Ask me about my&nbsp;</div>
+          <div style={{ textDecoration: 'line-through' }}>jobs</div>
+          <div>&nbsp;cat.</div>
         </div>
       </div>
     ),
