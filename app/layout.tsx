@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono,Fraunces} from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import { Analytics } from '@vercel/analytics/react'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className="mx-auto max-w-5xl bg-stone-50 dark:bg-stone-950 px-12 py-36 font-fraunces antialiased transition-colors">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
