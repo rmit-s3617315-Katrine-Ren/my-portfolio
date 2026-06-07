@@ -26,9 +26,9 @@ export default function ThemeToggle() {
 
   const trigger = () => {
       if (theme === "dark") {
-        playOff();
-      } else {
         playOn();
+      } else {
+        playOff();
       }
       setTheme(theme === "dark" ? "light" : "dark");
     };
