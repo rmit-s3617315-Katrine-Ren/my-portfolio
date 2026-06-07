@@ -1,18 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono,Fraunces} from "next/font/google";
+import { Fraunces } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Analytics } from '@vercel/analytics/react'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -32,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="en" suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} h-full antialiased`}>
+      className={`${fraunces.variable} h-full antialiased`}>
       <body className="mx-auto max-w-5xl bg-stone-50 dark:bg-stone-950 px-12 py-36 font-fraunces antialiased transition-colors">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}

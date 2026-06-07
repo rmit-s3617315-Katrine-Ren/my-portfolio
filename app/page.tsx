@@ -14,8 +14,8 @@ export default function Home() {
 
       <div className="grid grid-cols-1 gap-12 md:grid-cols-[2fr_1fr]">
       {/* Left */}
-      <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50">
-        <main className="flex flex-1 w-full max-w-3xl flex-col gap-13 items-center justify-between py-10 sm:py-32 px-0 xl:px-12 bg-white dark:bg-black sm:items-start">
+      <div className="flex flex-col flex-1 items-center justify-center">
+        <main className="flex flex-1 w-full max-w-3xl flex-col gap-13 items-center justify-between py-10 sm:py-32 px-0 xl:px-12 sm:items-start">
           {/* Intro */}
           <section>
             <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">Portfolio</h1>
